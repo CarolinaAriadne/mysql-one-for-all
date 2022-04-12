@@ -48,9 +48,9 @@ CREATE TABLE SpotifyClone.historico_reproducoes(
 
 CREATE TABLE SpotifyClone.usuario_segue_artistas(
     usuario_id INT NOT NULL,
-    artista_id INT NOT NULL,
+    nome_artista VARCHAR (50) NOT NULL,
     FOREIGN KEY (usuario_id) REFERENCES dados_usuario (usuario_id),
-    FOREIGN KEY (artista_id) REFERENCES artista (artista_id)
+    FOREIGN KEY (nome_artista) REFERENCES artista (nome_artista)
 )  engine = InnoDB;
 
 INSERT INTO SpotifyClone.dados_usuario (nome_usuario,idade_usuario) VALUES
@@ -95,7 +95,7 @@ INSERT INTO SpotifyClone.album (nome_album, ano_lancamento, artista_id,) VALUES
 ('Chained Down', 2007, 5),
 ('Cabinet of fools', 2012, 5),
 ('No guarantees', 2015, 5),
-('Apparatus', 6);
+('Apparatus', 2015, 6);
 
 INSERT TABLE Spotify.musicas (nome_musica, duracao_segundos) VALUES
 ('Soul For US', 200)
@@ -181,24 +181,31 @@ INSERT INTO Spotify.historico_reproducoes (usuario_id, nome_musica, data_reprodu
 (10, 'Home Forever', '2017-12-25', '01:03:57');
 
 
-INSERT INTO Spotify.usuario_segue_artistas (usuario_id, artista_id) VALUES
+INSERT INTO Spotify.usuario_segue_artistas (usuario_id, nome_artista) VALUES
+(1,'Walter Phoenix'),
+(1,'Freedie Shannon'),
+(1,'Lance Day'),
+(2, 'Walter Phoenix'),
+(2, 'Lance Day'),
+(3, 'Peter Strong'),
+(3, 'Walter Phoenix'),
+(4, 'Freedie Shannon'),
+(5, 'Tyler Isle'),
+(5, 'Fog'),
+(6, 'Fog'),
+(6, 'Lance Day'),
+(6, 'Walter Phoenix'),
+(7, 'Peter Strong'),
+(7, 'Tyler Isle'),
+(8, 'Walter Phoenix'),
+(8, 'Tyler Isle'),
+(9, 'Fog'),
+(9, 'Freedie Shannon'),
+(9, 'Lance Day'),
+(10, 'Peter Strong'),
+(10, 'Fog');
 
 
 
 
 
-
-
-
-
-
--- INSERT INTO SpotifyClone.tabela1 (coluna1, coluna2)
--- VALUES
---   ('exemplo de dados 1', 'exemplo de dados A'),
---   ('exemplo de dados 2', 'exemplo de dados B'),
---   ('exemplo de dados 3', 'exemplo de dados C');
-
--- INSERT INTO SpotifyClone.tabela2 (coluna1, coluna2)
--- VALUES
---   ('exemplo de dados 1', 'exemplo de dados X'),
---   ('exemplo de dados 2', 'exemplo de dados Y');
