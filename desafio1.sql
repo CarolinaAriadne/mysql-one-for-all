@@ -81,7 +81,7 @@ INSERT INTO SpotifyClone.artista(nome_artista) VALUES
 ('Peter Strong'),
 ('Lance Day'),
 ('Freedie Shannon'),
-('Tyle Isle'),
+('Tyler Isle'),
 ('Fog');
 
 INSERT INTO SpotifyClone.albuns (nome_album, ano_lancamento, artista_id) VALUES
