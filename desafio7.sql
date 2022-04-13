@@ -10,3 +10,4 @@ FROM
     SpotifyClone.seguidores AS seg ON art.artista_id = seg.artista_id
     GROUP BY art.nome_artista, alb.nome_album
 	ORDER BY seguidores DESC, artista, album;
+
